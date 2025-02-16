@@ -3,7 +3,7 @@ let listaNombres = [];
 function agregarAmigo() {
     let nombre = document.getElementById("amigo").value; // Obtenemos el input
 
-        if (nombre==""){
+        if (nombre===""){
             alert("Ingresar un nombre >:C");
         } else{
             listaNombres.push(nombre); // Agregamos el nombre al array
@@ -28,9 +28,12 @@ function limpiarCaja(){
     let cajalimpia= document.querySelector("#amigo").value="";
 
 }
-
+function limpiarLista(){
+    let listalimpia= document.querySelector("#listaAmigos").innerHTML="";
+}
 
 function sortearAmigo(){
+    limpiarLista();
     let elemento=document.getElementById("resultado");
     elemento.innerHTML="";
 
@@ -39,4 +42,7 @@ function sortearAmigo(){
 
     elemento.innerHTML=(amigosorteado);
 
+} 
+function hola(){
+    console.log("hola")
 }
